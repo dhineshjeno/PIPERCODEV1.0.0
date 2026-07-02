@@ -1,0 +1,81 @@
+{
+  "name": "pipercode-activity-tracker",
+  "displayName": "PiperCode Activity Tracker",
+  "description": "🛸 A high-performance, gamified coding activity tracker with Neo-Brutalist dashboard",
+  "version": "1.0.0",
+  "publisher": "PiperCode",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhineshjeno/PIPERCODEV1.0.0.git"
+  },
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other",
+    "Visualization",
+    "Productivity"
+  ],
+  "keywords": [
+    "coding",
+    "time tracking",
+    "analytics",
+    "productivity",
+    "programming",
+    "stats",
+    "gamification"
+  ],
+  "icon": "images/icon.png",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node",
+    "watch": "esbuild src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --watch",
+    "pretest": "npm run compile",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/pg": "^8.11.6",
+    "@types/vscode": "^1.60.0",
+    "esbuild": "^0.20.2",
+    "typescript": "^5.4.5"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "pipercode.showStats",
+        "title": "PiperCode: Show My Stats",
+        "category": "PiperCode"
+      },
+      {
+        "command": "pipercode.showToday",
+        "title": "PiperCode: Today's Coding Time",
+        "category": "PiperCode"
+      },
+      {
+        "command": "pipercode.openDashboard",
+        "title": "PiperCode: Open Dashboard",
+        "category": "PiperCode"
+      }
+    ],
+    "configuration": {
+      "title": "PiperCode",
+      "properties": {
+        "pipercode.streakDailyThresholdMinutes": {
+          "type": "integer",
+          "default": 30,
+          "description": "Minimum coding minutes required per 24-hour period to increment daily streak."
+        }
+      }
+    }
+  }
+}

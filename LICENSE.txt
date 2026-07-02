@@ -1,0 +1,5 @@
+Copyright (c) 2026 Dhinesh Jeno
+All rights reserved.
+
+This software and associated documentation files (the "Software") are proprietary.
+You may not use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, except as explicitly authorized by the copyright holder.

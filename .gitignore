@@ -1,0 +1,6 @@
+.env
+node_modules/
+out/
+dist/
+*.vsix
+.vscode-test/
