@@ -2,7 +2,7 @@
   "name": "pipercode-activity-tracker",
   "displayName": "PiperCode Activity Tracker",
   "description": "🛸 A high-performance, gamified coding activity tracker with Neo-Brutalist dashboard",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "publisher": "PiperCode",
   "license": "SEE LICENSE IN LICENSE.txt",
   "repository": {
